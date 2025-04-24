@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to books_path, notice: '書籍が追加されました'
+      redirect_to books_path, notice: "書籍が追加されました"
     else
       render :new, status: :unprocessable_entity
     end
