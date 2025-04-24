@@ -2,17 +2,17 @@ require "test_helper"
 
 class BooksControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get books_index_url
+    get books_url
     assert_response :success
   end
 
   test "should get new" do
-    get books_new_url
+    get new_book_url
     assert_response :success
   end
 
   test "should get create" do
-    get books_create_url
-    assert_response :success
+    post books_url, params: { book: { title: "Test Book", author: "Test Author", publisher: "Test Publisher", published_year: 2024 } }
+    assert_response :redirect
   end
 end
