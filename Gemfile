@@ -49,6 +49,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Ruby language server [https://github.com/castwide/solargraph]
+  gem "solargraph", require: false
 end
 
 group :development do
